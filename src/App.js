@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import Uploads from "./components/Uploads"
 import { useEffect, useState } from 'react';
+import NewForm from './components/NewForm';
 
 const API_URL = "http://localhost:3000/api/v1/uploads"
 
@@ -25,7 +26,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Image Uploader</h1>
+      <NewForm />
+
+      <h1>Uploads</h1>
       <Uploads uploads={uploads} />
     </div>
   );
